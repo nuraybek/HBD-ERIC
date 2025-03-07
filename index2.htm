@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, Eric! 🎉</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Comic Sans MS', cursive;
+            background: url('https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZmRsNG80c2pvejNlcGN3aGVqYTl3eG1yaWRqYWdxa3I5ZGV3OXJkNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qhgEdrysAhLFoE92hR/giphy.gif') no-repeat center center fixed;
+            background-size: cover; /* Котик с тортиком на весь фон */
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        /* Полупрозрачный слой для читаемости текста */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3); /* Тёмный слой для контраста */
+            z-index: 0;
+        }
+
+        .birthday-container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(255, 105, 180, 0.7);
+            text-align: center;
+            z-index: 2;
+            position: relative;
+            animation: bounceIn 1s ease;
+        }
+
+        @keyframes bounceIn {
+            0% { transform: scale(0); }
+            60% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        h1 {
+            font-size: 60px;
+            color: #ff1493;
+            text-shadow: 2px 2px 5px #ffd700;
+            margin: 0;
+            animation: glow 2s infinite;
+        }
+
+        @keyframes glow {
+            0% { text-shadow: 2px 2px 5px #ffd700; }
+            50% { text-shadow: 2px 2px 15px #ff69b4; }
+            100% { text-shadow: 2px 2px 5px #ffd700; }
+        }
+
+        p {
+            font-size: 28px;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 22px;
+            background: #ff69b4;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            background: #ff1493;
+        }
+
+        #gifContainer {
+            display: none;
+            margin-top: 20px;
+        }
+
+        #gifImage {
+            max-width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 0 10px #ff69b4;
+        }
+
+        .floating {
+            position: absolute;
+            z-index: 1;
+            animation: floatUp 5s ease-in infinite;
+        }
+
+        @keyframes floatUp {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+        }
+
+        .firework {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: radial-gradient(circle, #ffd700, transparent);
+            border-radius: 50%;
+            animation: explode 1s ease-out forwards;
+            z-index: 0;
+        }
+
+        @keyframes explode {
+            0% { transform: scale(0); opacity: 1; }
+            100% { transform: scale(20); opacity: 0; }
+        }
+
+        /* Добавляем классные звёздочки для фона */
+        .star {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            color: #ffd700;
+            font-size: 20px;
+            animation: twinkle 2s infinite;
+            z-index: 1;
+        }
+
+        @keyframes twinkle {
+            0% { opacity: 0.2; }
+            50% { opacity: 1; }
+            100% { opacity: 0.2; }
+        }
+    </style>
+</head>
+<body>
+    <div class="birthday-container">
+        <h1>Happy Birthday, Eric! 🎉</h1>
+        <p>You’re the coolest friend ever!</p>
+        <p>Wishing you a day full of epic fun!</p>
+        <button onclick="showSurprise()">Click for Magic! ✨</button>
+        <div id="gifContainer">
+            <img id="gifImage" src="https://media.giphy.com/media/XB0WBGfLio26t1vB8G/giphy.gif" alt="Birthday Vera GIF">
+            <p>This is for YOU, Eric!</p>
+        </div>
+    </div>
+
+    <!-- Плавающие котики и сердечки -->
+    <div class="floating" style="left: 10%; animation-delay: 0s;">😻</div>
+    <div class="floating" style="left: 20%; animation-delay: 1s;">❤️</div>
+    <div class="floating" style="left: 30%; animation-delay: 2s;">🐾</div>
+    <div class="floating" style="left: 40%; animation-delay: 3s;">💖</div>
+    <div class="floating" style="left: 50%; animation-delay: 0.5s;">😺</div>
+    <div class="floating" style="left: 60%; animation-delay: 1.5s;">💕</div>
+    <div class="floating" style="left: 70%; animation-delay: 2.5s;">🐱</div>
+    <div class="floating" style="left: 80%; animation-delay: 3.5s;">💗</div>
+
+    <!-- Звёздочки для фона -->
+    <div class="star" style="left: 15%; top: 20%; animation-delay: 0s;">✨</div>
+    <div class="star" style="left: 25%; top: 60%; animation-delay: 0.5s;">✨</div>
+    <div class="star" style="left: 35%; top: 10%; animation-delay: 1s;">✨</div>
+    <div class="star" style="left: 55%; top: 70%; animation-delay: 1.5s;">✨</div>
+    <div class="star" style="left: 75%; top: 30%; animation-delay: 2s;">✨</div>
+
+    <!-- Аудио -->
+    <audio id="birthdayMusic" loop>
+        <source src="https://www.kozco.com/tech/piano2.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        function showSurprise() {
+            var gifContainer = document.getElementById("gifContainer");
+            gifContainer.style.display = "block";
+            document.getElementById("birthdayMusic").play();
+            launchFireworks();
+        }
+
+        document.querySelectorAll('.floating').forEach(element => {
+            element.style.left = Math.random() * 90 + '%';
+            element.style.animationDuration = (Math.random() * 3 + 3) + 's';
+        });
+
+        document.querySelectorAll('.star').forEach(element => {
+            element.style.left = Math.random() * 90 + '%';
+            element.style.top = Math.random() * 90 + '%';
+        });
+
+        function launchFireworks() {
+            for (let i = 0; i < 10; i++) {
+                setTimeout(() => {
+                    let firework = document.createElement('div');
+                    firework.className = 'firework';
+                    firework.style.left = Math.random() * 100 + '%';
+                    firework.style.top = Math.random() * 100 + '%';
+                    firework.style.background = `radial-gradient(circle, hsl(${Math.random() * 360}, 100%, 50%), transparent)`;
+                    document.body.appendChild(firework);
+                    setTimeout(() => firework.remove(), 1000);
+                }, i * 200);
+            }
+        }
+    </script>
+</body>
+</html>
